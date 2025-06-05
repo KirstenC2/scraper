@@ -7,9 +7,9 @@ data = []
 
 with open("activity.csv", mode="r", encoding="utf-8") as tsv_file:
     reader = csv.DictReader(tsv_file, delimiter='\t', fieldnames=new_headers)
-    next(reader)  # 跳過原本的標題列
+    next(reader) #跳過header，因爲前面有放header
     for row in reader:
-        # 轉換 price 為整數，如果不能轉就設成 None 或 0
+        # 轉換資料形態
         try:
             row['price'] = int(row['price'])
         except ValueError:
