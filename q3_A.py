@@ -10,6 +10,7 @@ with open("activity.csv", mode="r", encoding="utf-8") as tsv_file:
     reader = csv.DictReader(tsv_file, delimiter='\t', fieldnames=new_headers)
     next(reader) 
     for row in reader:
+        # 轉換data type
         try:
             row['price'] = int(row['price'])
         except ValueError:
