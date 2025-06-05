@@ -1,6 +1,6 @@
-# 假設說回傳一下的error
+# 假設說回傳的error如下
 
-mock_response = {
+mock_error_response = {
     "status": {
         "code": 500,
         "msg": "Validation failed."
@@ -10,5 +10,5 @@ mock_response = {
     }
 }
 
-error_msg = mock_response["data"]["errors"]
+error_msg = mock_error_response["data"]["errors"]
 print("Errors内容:", error_msg)
