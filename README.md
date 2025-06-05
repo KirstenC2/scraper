@@ -1,1 +1,1 @@
-# javascript_scraper
+# scraper
